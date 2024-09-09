@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SENA\\source\\repos\\bienesoft\\Backend\\bienesoft\\bienesoft.csproj": {}
+    "C:\\Proyecto\\bienesoft\\Backend\\bienesoft\\bienesoft.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SENA\\source\\repos\\bienesoft\\Backend\\bienesoft\\bienesoft.csproj": {
+    "C:\\Proyecto\\bienesoft\\Backend\\bienesoft\\bienesoft.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SENA\\source\\repos\\bienesoft\\Backend\\bienesoft\\bienesoft.csproj",
+        "projectUniqueName": "C:\\Proyecto\\bienesoft\\Backend\\bienesoft\\bienesoft.csproj",
         "projectName": "bienesoft",
-        "projectPath": "C:\\Users\\SENA\\source\\repos\\bienesoft\\Backend\\bienesoft\\bienesoft.csproj",
+        "projectPath": "C:\\Proyecto\\bienesoft\\Backend\\bienesoft\\bienesoft.csproj",
         "packagesPath": "C:\\Users\\SENA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SENA\\source\\repos\\bienesoft\\Backend\\bienesoft\\obj\\",
+        "outputPath": "C:\\Proyecto\\bienesoft\\Backend\\bienesoft\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
