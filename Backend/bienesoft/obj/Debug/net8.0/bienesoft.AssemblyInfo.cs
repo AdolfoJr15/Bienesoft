@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("bienesoft")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78a4b602ed2339cc77ac9bec44a54d957fee9a51")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa82ab78b5e97228798e0d81b2dec242b02a4527")]
 [assembly: System.Reflection.AssemblyProductAttribute("bienesoft")]
 [assembly: System.Reflection.AssemblyTitleAttribute("bienesoft")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
