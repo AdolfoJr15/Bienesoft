@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "wLfflWHKNrE=",
   "success": true,
   "projectFilePath": "C:\\ProyectoFormativo\\bienesoft\\Backend\\bienesoft\\bienesoft.csproj",
+=======
+  "dgSpecHash": "sSjOvtilkRw=",
+  "success": true,
+  "projectFilePath": "C:\\Proyecto\\bienesoft\\Backend\\bienesoft\\bienesoft.csproj",
+>>>>>>> 9a9256884749929cf34fe8386947de5ef6471d1c
   "expectedPackageFiles": [
     "C:\\Users\\fabis\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.7\\microsoft.aspnetcore.authentication.jwtbearer.8.0.7.nupkg.sha512",
     "C:\\Users\\fabis\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
