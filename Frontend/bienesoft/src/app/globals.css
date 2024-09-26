@@ -1,0 +1,171 @@
+:root {
+  --bg-color-primary: #f1f6f6;
+  --bg-body: #0C2345;
+  --btn-primario: #A1CEE4;
+  --btn-text: #5297f7;
+  --form-text: #000000;
+  --body-form: #a9afb4;
+  background-color: var(--bg-color-primary);
+}
+
+/* Estilos generales para el cuerpo y el contenedor principal */
+body {
+  background-color: var(--bg-color-primary);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  height: 100vh;
+}
+
+/* Estilos de la barra de navegación */
+.navbar.bg-nav-public {
+  background:var(--btn-primario);
+  border-bottom: 1px solid var(--btn-primario);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Asegura que la barra de navegación se extienda a lo largo del ancho de la página */
+  z-index: 1000;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between; /* Alinea el contenido al principio y al final */
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  display: flex; /* Asegura que la imagen del logo esté alineada correctamente */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espacio entre los enlaces */
+}
+
+.nav-links a {
+  color: var(--form-text);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: transparent;
+  border-bottom: 2px solid var(--form-text);
+}
+
+.button {
+  background-color: transparent;
+  color: var(--form-text);
+  border: solid 1px;
+  border-radius: 40px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: var(--form-text);
+  color: var(--bg-color-primary);
+}
+
+/* Estilos del formulario de inicio de sesión */
+.login-form {
+  background-color: var(--bg-color-primary);
+  border: 1px solid var(--bg-color-primary); /* Borde sencillo */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--form-text); /* Sombra suave */
+  padding: 20px;
+  width: 120%;
+  max-width: 400px; /* Establece un ancho máximo */
+  text-align: center;
+  margin-top: 150px; /* Separación del formulario de la barra de navegación */
+  justify-content: center;
+}
+
+.login-title {
+  color: var(--form-text);
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form-label {
+  display: block;
+  font-size: 16px;
+  color: var(--form-text);
+  margin-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.form-email,
+.form-password {
+  border: 1px solid var(--form-text);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%; /* Ajusta el ancho para que ocupe el espacio disponible en el formulario */
+}
+
+.form-email:focus,
+.form-password:focus {
+  outline: none;
+  border-color: var(--form-text);
+}
+
+.btn.btn-primary {
+  background-color: var(--btn-text);
+  color: var(--bg-color-primary);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%; /* Asegura que el botón ocupe todo el ancho del formulario */
+  margin: 10px 0;
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--form-text);
+}
+
+/* Estilos para los enlaces */
+.links-container {
+  display: flex;
+  justify-content: space-between; /* Alinea los enlaces horizontalmente */
+  gap: 10px; /* Espacio entre los enlaces */
+  margin-top: 10px;
+}
+
+.link {
+  color: var(--form-text);
+  text-decoration:underline;
+  font-size: 14px;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color:var(--btn-text);
+}
+
+
+
+
+ 
