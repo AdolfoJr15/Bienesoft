@@ -1,12 +1,13 @@
 ﻿namespace Bienesoft.Models
 {
     public class FirmaModel
-    { 
-   public int SignatureId { get; set; }
-    public string SignatureLearner { get; set; }
-    public string SignatureInstructor { get; set; }
-    public string SignatureCoordinator { get; set; }
-    public string SignatureInternalAsset { get; set; }
-    public string SignatureAsset { get; set; }
+    {
+        public int Signature_Id { get; set; }
+        public string Signature_Learner { get; set; }
+        public string Signature_Instructor { get; set; }
+        public string Signature_Coordinator { get; set; }
+        public string Signature_InternalAsset { get; set; }
+        public string Signature_Asset { get; set; }
+    }
 }
 
