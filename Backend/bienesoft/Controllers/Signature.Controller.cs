@@ -1,18 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using bienesoft.Funcions;
 using Bienesoft.Models;
-using bienesoft.Funcions;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Bienesoft.Controllers
 {
     [Controller]
     [Route("/api[controller]")]
-    public class departmentController : Controller
+    public class signatureController : Controller
     {
         public GeneralFunction GeneralFunction;
 
-        [HttpPost("CreateDepartment")]
-        public IActionResult Create(departmentModel Department)
+        [HttpPost("CreateSignature")]
+        public IActionResult Create(signatureModel Signature)
         {
             try
             {
@@ -25,7 +24,7 @@ namespace Bienesoft.Controllers
             }
         }
 
-        [HttpGet("GetDepartment")]
+        [HttpGet("GetSignature")]
         public IActionResult Get(int id)
         {
             try
@@ -39,7 +38,7 @@ namespace Bienesoft.Controllers
             }
         }
 
-        [HttpGet("GetsDepartment")]
+        [HttpGet("GetsSignature")]
         public IActionResult Gets(int id)
         {
             try
@@ -53,8 +52,8 @@ namespace Bienesoft.Controllers
             }
         }
 
-        [HttpPost("UpdateDepartment")]
-        public IActionResult Update(int Id, departmentModel Department)
+        [HttpPost("UpdateSignature")]
+        public IActionResult Update(int Id, signatureModel Signature)
         {
             try
             {
@@ -67,7 +66,7 @@ namespace Bienesoft.Controllers
             }
         }
 
-        [HttpDelete("DeleteDepartment")]
+        [HttpDelete("DeleteSignature")]
         public IActionResult Delete(int id)
         {
             try
@@ -80,7 +79,6 @@ namespace Bienesoft.Controllers
                 return StatusCode(500, ex.ToString());
             }
         }
-
 
     }
 }
