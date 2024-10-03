@@ -1,84 +1,62 @@
-﻿using bienesoft.Funcions;
-using Bienesoft.Models;
+﻿using Bienesoft.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bienesoft.Controllers
 {
-    [Controller]
-    [Route("/api[controller]")]
-    public class signatureController : Controller
-    {
-        public GeneralFunction GeneralFunction;
+	[Controller]
+	[Route("/api[controller]")]
+	public class FirmaController : Controller
+	{
+		[HttpPost]
+		public IActionResult Create(SignatureModel firma)
+		{
+			try
+			{
+				return Ok();
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, ex.ToString());
+			}
+		}
+		[HttpGet("read")]
+		public IActionResult Read()
+		{
+			try
+			{
+				return Ok();
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, ex.ToString());
+			}
+		}
+		[HttpPost("Update")]
 
-        [HttpPost("CreateSignature")]
-        public IActionResult Create(signatureModel Signature)
-        {
-            try
-            {
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                GeneralFunction.Addlog(ex.Message);
-                return StatusCode(500, ex.ToString());
-            }
-        }
+		public IActionResult Update()
+		{
+			try
+			{
+				return Ok();
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, ex.ToString());
+			}
 
-        [HttpGet("GetSignature")]
-        public IActionResult Get(int id)
-        {
-            try
-            {
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                GeneralFunction.Addlog(ex.Message);
-                return StatusCode(500, ex.ToString());
-            }
-        }
+		}
+		[HttpDelete("Delete")]
+		public IActionResult Delete()
+		{
+			try
+			{
+				return Ok();
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, ex.ToString());
+			}
 
-        [HttpGet("GetsSignature")]
-        public IActionResult Gets(int id)
-        {
-            try
-            {
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                GeneralFunction.Addlog(ex.Message);
-                return StatusCode(500, ex.ToString());
-            }
-        }
-
-        [HttpPost("UpdateSignature")]
-        public IActionResult Update(int Id, signatureModel Signature)
-        {
-            try
-            {
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                GeneralFunction.Addlog(ex.Message);
-                return StatusCode(500, ex.ToString());
-            }
-        }
-
-        [HttpDelete("DeleteSignature")]
-        public IActionResult Delete(int id)
-        {
-            try
-            {
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                GeneralFunction.Addlog(ex.Message);
-                return StatusCode(500, ex.ToString());
-            }
-        }
-
-    }
+		}
+	}
 }

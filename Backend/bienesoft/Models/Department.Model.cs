@@ -1,8 +1,10 @@
-﻿namespace Bienesoft.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Bienesoft.Models
 {
-    public class departmentModel
+    public class DepartmentModel
     {
-        public int DepartmentId { get; set; }
+        [Key]public int Id_Department { get; set; }
         public string DepartmentName { get; set; }
 
     }

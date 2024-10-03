@@ -1,4 +1,5 @@
-﻿using Bienesoft.Models;
+﻿using bienesoft.Funcions;
+using Bienesoft.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bienesoft.Controllers
@@ -7,10 +8,64 @@ namespace Bienesoft.Controllers
     [Route("Api/[Controller]")]
     public class AttendantController : Controller
     {
-        [HttpPost]
-        public IActionResult ReturAttendant(AttendantModel attendant )
+        public GeneralFunction GeneralFunction;
+
+        [HttpPost("CreateAttendant")]
+        public IActionResult Create(AttendantController attendant)
         {
-            return Ok(attendant.Nom_Acudiente);
+            try
+            {
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                GeneralFunction.Addlog(ex.Message);
+                return StatusCode(500, ex.ToString());
+
+            }
         }
+        [HttpGet("GetAttendant")]
+
+        public IActionResult Get(int id)
+        {
+            try
+            {
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                {
+                    GeneralFunction.Addlog(ex.Message);
+                    return StatusCode(500, ex.ToString());
+                }
+            }
+        }
+        [HttpPost("UpdateAttendant")]
+        public IActionResult Update(int Id, AttendantController attendant)
+        {
+            try
+            {
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                GeneralFunction.Addlog(ex.Message);
+                return StatusCode(500, ex.ToString());
+            }
+        }
+        [HttpDelete("DeleteAttendant")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                GeneralFunction.Addlog(ex.Message);
+                return StatusCode(500, ex.ToString());
+            }
+        }
+
     }
 }

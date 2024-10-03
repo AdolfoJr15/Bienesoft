@@ -2,14 +2,14 @@
 {
     public class FileModel
     {
-        public int File_Id { get; set; }
+        public int Id_Ficha { get; set; }
 
-        public int File_Number { get; set; }
+        public int Num_Ficha { get; set; }
 
-        public int Apprentice_count_File { get; set; }
+        public int Can_Apr_Ficha { get; set; }
 
-        public DateTime Start_Date { get; set; }
+        public DateTime Fec_Inicio { get; set; }
 
-        public DateTime End_Date {  get; set; }
+        public DateTime Fec_Fin {  get; set; }
     }
 }

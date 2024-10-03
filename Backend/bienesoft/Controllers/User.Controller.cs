@@ -1,7 +1,10 @@
 ﻿using bienesoft.Funcions;
 using bienesoft.models;
 using bienesoft.Models;
+using bienesoft.Services;
+using Bienesoft.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -15,12 +18,15 @@ namespace bienesoft.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly JWTModels _jwtSettings;
+        private readonly UserServices _userServices;
+        private readonly GeneralFunction _generalFunction;
 
-        public GeneralFunction GeneralFunction;
-        public LoginUserController(IConfiguration configuration)
+        public LoginUserController(IConfiguration configuration, UserServices userServices, GeneralFunction generalFunction)
         {
             _configuration = configuration;
+            _userServices = userServices;
             _jwtSettings = configuration.GetSection("JWT").Get<JWTModels>();
+            _generalFunction = generalFunction;
         }
 
         [HttpPost]
@@ -28,8 +34,6 @@ namespace bienesoft.Controllers
         {
             try
             {
-                //GeneralFunction generalFunction = new GeneralFunction();
-                //generalFunction.Addlog("El programa fallo");
                 var key = Encoding.UTF8.GetBytes(_jwtSettings.keysecret);
 
                 ClaimsIdentity subject = new ClaimsIdentity(new Claim[]
@@ -53,8 +57,8 @@ namespace bienesoft.Controllers
             }
             catch (Exception ex)
             {
-                GeneralFunction.Addlog(ex.ToString());
-                return StatusCode(500, ex.ToString());
+                _generalFunction.Addlog(ex.ToString());
+                return StatusCode(500, "Ocurrió un error en el servidor.");
             }
         }
 
@@ -72,8 +76,8 @@ namespace bienesoft.Controllers
             }
             catch (Exception ex)
             {
-                GeneralFunction.Addlog(ex.ToString());
-                return StatusCode(500, ex.ToString());
+                _generalFunction.Addlog(ex.ToString());
+                return StatusCode(500, "Ocurrió un error en el servidor.");
             }
         }
 
@@ -89,9 +93,21 @@ namespace bienesoft.Controllers
             }
             catch (Exception ex)
             {
-                GeneralFunction.Addlog(ex.ToString());
-                return StatusCode(500, ex.ToString());
+                _generalFunction.Addlog(ex.ToString());
+                return StatusCode(500, "Ocurrió un error en el servidor.");
             }
         }
+
+        [HttpGet("AllUsers")]
+        public ActionResult<IEnumerable<LearnerModel>> AllUser()
+        {
+            var learners = _userServices.GetLearnerModels();
+            if (learners == null)
+            {
+                return NotFound("No se encontraron usuarios.");
+            }
+            return Ok(learners);
+        }
+
     }
 }
