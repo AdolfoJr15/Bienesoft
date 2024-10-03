@@ -1,8 +1,5 @@
-function btn ({title,styles}) {
-
-    return ( 
-        <button className={styles}>{title}</button>
-     );
-}
-
-export default btn ;
+function Btn ({ texto, onClick,href}) 
+    {
+        return <button  className="button " onClick={onClick}>{texto}{href}</button>;
+    }
+  export default Btn;

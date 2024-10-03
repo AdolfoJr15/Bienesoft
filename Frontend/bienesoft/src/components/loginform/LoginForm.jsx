@@ -1,4 +1,4 @@
-import TitleH1 from "../utilities/titles/TitleH1";
+import TitleH1 from "../../utilities/titles/TitleH1";
 
 function LoginForm () {
     return (

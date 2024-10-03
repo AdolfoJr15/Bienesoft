@@ -1,82 +1,46 @@
 import TitleH1 from "../../components/utilities/titles/TitleH1";
+import Labeltext from "@/components/utilities/labels/Labeltext";
+import Btn from "@/components/utilities/buttons/Btn";
 
 function CreateUser() {
-    return (
-        <main>
-            <form className="create-user-form shadow-lg">
-                <div className="mb-3">
-                    <TitleH1 title="Crear Cuenta" styles="create-title" />
-                    <input
-                        type="text"
-                        className="form-input"
-                        placeholder="Nombre"
-                        id="inputName"
-                        required
-                    />
-                </div>
-                <div className="mb-3">
-                    <input 
-                        type="text"
-                        className="form-input"
-                        placeholder="Apellido"
-                        id="inputSurname"
-                        required
-                    />
-                </div>
-                <div className="mb-3">
-                    <input 
-                        type="date"
-                        className="form-date"
-                        id="inputDate"
-                        required 
-                    />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="sexo">Sexo</label>
-                    <select name="sexo" id="sexo" onChange="handleSelectChange" required>
-                        <option value="">Seleccione una Opción</option>
-                        <option value="hombre">Hombre</option>
-                        <option value="mujer">Mujer</option>
-                        <option value="otro">Otro</option>
-                        <input 
-                        type="text" 
-                        placeholder="¿Cual?"/>
-                    </select>
-                </div>
-                <div className="mb-3">
-                    <input 
-                        type="number"
-                        className="form-phone"
-                        placeholder="Número de Celular"
-                        id="inputPhone"
-                        required 
-                    />
-                </div>
-                <div className="mb-3">
-                    <input
-                        type="email"
-                        className="form-email"
-                        placeholder="Correo electrónico"
-                        id="inputEmail"
-                        required
-                    />
-                </div>
-                <div className="mb-3">
-                    <input
-                        type="password"
-                        className="form-password"
-                        placeholder="Contraseña"
-                        id="inputPassword"
-                        required
-                    />
-                </div>
-                <button type="submit" className="btn btn-primary">Registrarse</button>
-                <div className="links-container">
-                    <a className="link" href="/app/page.js">Ya tengo una cuenta</a>
-                </div>
-            </form>
-        </main>
-    );
+  return (
+    <div className="border col-3   flex-column align-items-center d-flex m-auto shadow-lg  py-4 px-4">
+      <form>
+        <div className="">
+          <TitleH1 title="Crear Cuenta" styles="" />
+        </div>
+        <div className=" ">
+          <Labeltext placeholder="Nombre" />
+        </div>
+        <div className="mt-4  ">
+          <Labeltext placeholder="Apellido" />
+        </div>
+
+        <div className="mb-3 mt-3">
+          <label htmlFor="sexo">Sexo</label>
+          <select name="sexo" id="sexo" onChange="handleSelectChange" required>
+            <option value="">Seleccione una Opción</option>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+            <option value="otro">Otro</option>
+            <input type="text" placeholder="¿Cual?" />
+          </select>
+        </div>
+        <div className="mt-3  ">
+          <Labeltext placeholder="Telefono" />
+        </div>
+        <div className="mt-4  ">
+          <Labeltext placeholder="Correo Electronico" />
+        </div>
+        <div className="mt-4 pb-3 ">
+          <Labeltext placeholder="Contraseña" />
+        </div>
+        <div className="ms-5">
+          <Btn texto="Enviar" onClick="" />
+        </div>
+      </form>
+    </div>
+  );
 }
 
 export default CreateUser;

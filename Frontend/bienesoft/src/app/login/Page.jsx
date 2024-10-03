@@ -1,14 +1,11 @@
-import CreateUser from "../createuser/CreateUser";
-import ResetPassword from "../resetpassword/ResetPassword";
+import PublicNav from "@/components/navs/PublicNav";
+import LoginUser from "@/components/views/users/LoginUser";
 
 export default function login() {
     return (
       <>
-      <ResetPassword/>
-      <CreateUser/>   
+      <PublicNav/>
+      <LoginUser />
       </>
     );
-  
-    
-    
   }

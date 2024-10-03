@@ -1,6 +1,7 @@
 ﻿using bienesoft.Funcions;
 using bienesoft.models;
 using bienesoft.Models;
+using bienesoft.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -16,10 +17,13 @@ namespace bienesoft.Controllers
         private readonly IConfiguration _configuration;
         private readonly JWTModels _jwtSettings;
 
+        public UserServices _userServices;
+
         public GeneralFunction GeneralFunction;
-        public LoginUserController(IConfiguration configuration)
+        public LoginUserController(IConfiguration configuration, UserServices userservices)
         {
             _configuration = configuration;
+            _userServices = userservices;
             _jwtSettings = configuration.GetSection("JWT").Get<JWTModels>();
         }
 
@@ -93,5 +97,10 @@ namespace bienesoft.Controllers
                 return StatusCode(500, ex.ToString());
             }
         }
+        [HttpGet("AllUsers")]
+        public ActionResult<IEnumerable<LearnerModel>> AllUser()
+        {
+            return Ok(_userServices.GetLearnerModels());
+        }  
     }
 }

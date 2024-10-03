@@ -2,13 +2,13 @@
 {
     public class AttendantModel
     {
-        public int Id_Acudiente  { get; set; }
-        public string Nom_Acudiente { get; set; }
-        public string Ape_Acudienite { get; set; }
-        public int Tel_Acudienite { get; set; }
-        public string Dir_Acudienite { get; set; }
-        public string Cor_Acudiente { get; set; }
-        public int Eda_Acudiente { get; set; }
+        public int Id_Attendant  { get; set; }
+        public string Name_Attendant { get; set; }
+        public string LastName_Attendant { get; set; }
+        public int Telephone_Attendant { get; set; }
+        public string Adress_Attendant { get; set; }
+        public string Email_Attendant { get; set; }
+        public int DateBirth_Attendant { get; set; }
 
 
     }
